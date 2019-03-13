@@ -1,5 +1,6 @@
 package com.xobotun.pojocodegen.internal.javalang;
 
+import com.xobotun.pojocodegen.internal.ClassTemplate;
 import com.xobotun.pojocodegen.internal.javalang.bricks.AccessLevel;
 import com.xobotun.pojocodegen.internal.javalang.bricks.Name;
 import lombok.Builder;
@@ -18,6 +19,7 @@ public class XClass {
     @Builder.Default private List<String> superclasses = Collections.emptyList(); // Multiple?!
     @Builder.Default private List<XAnnnotation> annnotations = Collections.emptyList();
     @Builder.Default private List<XField> fields = Collections.emptyList();
+    @Builder.Default private List<ClassTemplate> templatesToImplement = Collections.emptyList();
 
     @Override
     public String toString() {
